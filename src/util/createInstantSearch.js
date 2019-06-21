@@ -6,7 +6,7 @@ import { warn } from './warn';
 
 export const createInstantSearch = instantSearchOptions => {
   const search = instantsearch(instantSearchOptions);
-  const { searchClient, indexName } = instantSearchOptions;
+  const { searchClient, indexName, multiIndex } = instantSearchOptions;
 
   // main API for SSR, called in asyncData of a root component which contains instantsearch
   search.findResultsState = params => {
@@ -90,11 +90,12 @@ export const createInstantSearch = instantSearchOptions => {
   // we can then reuse that InstantSearch instance seamlessly from `ais-ssr`
   const rootMixin = {
     provide() {
+      const name = multiIndex ? `$_ais-${indexName}` : '$_ais';
       return {
         // should be possible to configure this with {camelcase: ['error', {allow: ['^\\$_']}]}
         // but that didn't work
         // eslint-disable-next-line camelcase
-        $_ais: search,
+        [name]: search,
       };
     },
   };
