@@ -90,7 +90,7 @@ export const createInstantSearch = instantSearchOptions => {
   // we can then reuse that InstantSearch instance seamlessly from `ais-ssr`
   const rootMixin = {
     provide() {
-      const name = multiIndex ? `$_ais-${indexName}` : '$_ais';
+      const name = multiIndex ? `$_ais_${indexName}` : '$_ais';
       return {
         // should be possible to configure this with {camelcase: ['error', {allow: ['^\\$_']}]}
         // but that didn't work
