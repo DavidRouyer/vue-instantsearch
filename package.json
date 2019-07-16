@@ -1,5 +1,5 @@
 {
-  "name": "vue-instantsearch",
+  "name": "@davidrouyer/vue-instantsearch",
   "author": {
     "name": "Algolia, Inc.",
     "url": "https://www.algolia.com"
@@ -16,7 +16,7 @@
     "autocomplete"
   ],
   "license": "MIT",
-  "version": "2.2.2",
+  "version": "2.2.2-custom",
   "files": [
     "dist"
   ],
