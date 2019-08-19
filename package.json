@@ -16,7 +16,7 @@
     "autocomplete"
   ],
   "license": "MIT",
-  "version": "2.2.2-custom",
+  "version": "2.3.0-custom",
   "files": [
     "dist"
   ],
@@ -46,7 +46,7 @@
   },
   "dependencies": {
     "algoliasearch-helper": "^2.26.1",
-    "instantsearch.js": "^3.5.4"
+    "instantsearch.js": "^3.6.0"
   },
   "peerDependencies": {
     "algoliasearch": "^3.30.0",
@@ -101,15 +101,15 @@
   "bundlesize": [
     {
       "path": "./dist/vue-instantsearch.js",
-      "maxSize": "60 kB"
+      "maxSize": "60.50 kB"
     },
     {
       "path": "./dist/vue-instantsearch.esm.js",
-      "maxSize": "14.25 kB"
+      "maxSize": "14.50 kB"
     },
     {
       "path": "./dist/vue-instantsearch.common.js",
-      "maxSize": "14.50 kB"
+      "maxSize": "14.75 kB"
     }
   ],
   "jest": {
